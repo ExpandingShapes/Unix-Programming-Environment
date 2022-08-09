@@ -1,0 +1,19 @@
+Exercise 1-1. Explain what happens with
+$ date\@
+
+@ characte is interpreted as part of the text. Command "date@" will be sent. There is no such command, that's an error.
+
+Exercise 1-2. Most shells (though not the 7th Edition shell) interpret # as introducing a
+comment, and ignore all text from the # to the end of the line. Given this, explain the
+following transcript, assuming your erase character is also #:
+$ date
+Mon Sep 26 12:39:56 EDT 1983
+$ #date
+Mon Sep 26 12:40:21 EDT 1983
+$ \#date
+$ \\#date
+#date: not found
+$
+
+2nd command - # erases the character before (nothing) -> $ date
+3rd command - 
