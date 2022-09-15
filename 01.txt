@@ -17,3 +17,69 @@ $
 
 2nd command - # erases the character before (nothing) -> $ date
 3rd command - 
+
+Упражнение 1.3. Введите
+$ ls /usr/games
+и сделайте, что первым придет в голову. В нерабочее время некоторые
+вещи выглядят забавнее
+
+Unfortunately there is no /usr/games directory in modern UNIX-like systems.
+
+Упражнение 1.4. В чем состоят отличия между этими командами?
+$ ls junk $ echo junk
+$ ls /    $ echo /
+$ ls      $ echo
+$ ls *    $ echo *
+$ ls '*'  $ echo '*'
+
+$ ls junk lists the specified files only, in this case junk                 | $ echo junk prints junk, the string passed to the command
+$ ls / lists the contents of the root directory                             | $ echo / prints /, the string passed to the command
+$ ls lists the contents of the current directory                            | $ echo prints an empty line since nothing is passed to the command
+$ ls * lists the contents of the current directory with its subdirectories  | $ echo * lists the contents of the current directory
+$ ls '*' lists the contents of the '*' directory or the file '*' only       | $ echo '*' prints *, the string passed to the command
+
+Упражнение 1.5. Объясните, почему
+$ ls >ls.out
+включает ls.out в список имен.
+
+Because first the file ls.out is created (if it is absent) and then ls command is executed with redirecting the output to the file.
+
+Упражнение 1.6. Поясните вывод команды
+$ wc temp >temp
+Если в имени команды будет сделана ошибка, как в
+$ woh >temp
+что произойдет? 
+
+First an empty file temp is created then wc command will be executed with this very file and as long as it is empty it will be rewritten with
+0       0       0 temp
+First an empty file temp is created then woh command will be executed but there is no such command. So we get an error and an empty file.
+
+
+Упражнение 1.7. Объясните, в чем состоит отличие между
+$ who | sort
+и
+$ who >sort
+
+In the first case the output of who command is sorted and printed in console.
+In the second one the output of who command is put into file named sort. Unsorted.
+
+Упражнение 2.1. Что произойдет при нажатии ctl-d в редакторе ed?
+Сравните с командой
+$ ed <file
+
+In the first case 
+In the second one ed is confused because I'm afraid it's not supposed to work with input from a file.
+
+
+Упражнение 2.2. На основании информации этого раздела можно в об
+щих чертах представить себе механизм работы команды ls. Подсказ
+ка: cat . >foo; ls f foo. ~
+Упражнение 2.3. (более сложное). Как работает команда pwd? ~
+Упражнение 2.4. Команда du была создана для слежения за использо
+ванием диска. Ее применение для по иска файлов в каталоге представ
+ляется довольно странным и, возможно, неправильным. В качестве
+альтернативы изучите страницу руководства find(1) и сравните эти
+две команды. В частности, сравните команду du a | grep ... с соот
+ветствующим вызовом find. Какая из них работает быстрее? Что луч
+ше – написать новую программу или использовать побочный эффект
+существующей? ~
