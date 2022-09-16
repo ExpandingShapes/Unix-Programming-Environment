@@ -67,19 +67,16 @@ In the second one the output of who command is put into file named sort. Unsorte
 Сравните с командой
 $ ed <file
 
-In the first case 
-In the second one ed is confused because I'm afraid it's not supposed to work with input from a file.
+In the first case ed will response with an error at first because it expects an address or a command and if received ctl-d again it will be closed.
+In the second one ed is confused because I'm afraid it's not supposed to work with input from a file. So it responses with error.
+
+Упражнение 2.2. На основании информации этого раздела можно в об
+щих чертах представить себе механизм работы команды ls. Подсказ
+ка: cat . >foo; ls f foo.
+
+It reads . directory file which contains the contents of the current directory and lists them.
+
+Упражнение 2.3. (более сложное). Как работает команда pwd?
 
 
-Упражнение 2.2. На основании информации этого раздела можно в об
-щих чертах представить себе механизм работы команды ls. Подсказ
-ка: cat . >foo; ls f foo. ~
-Упражнение 2.3. (более сложное). Как работает команда pwd? ~
-Упражнение 2.4. Команда du была создана для слежения за использо
-ванием диска. Ее применение для по иска файлов в каталоге представ
-ляется довольно странным и, возможно, неправильным. В качестве
-альтернативы изучите страницу руководства find(1) и сравните эти
-две команды. В частности, сравните команду du a | grep ... с соот
-ветствующим вызовом find. Какая из них работает быстрее? Что луч
-ше – написать новую программу или использовать побочный эффект
-существующей? ~
+Упражнение 2.4. Команда du была создана для слежения за использованием диска. Ее применение для поиска файлов в каталоге представляется довольно странным и, возможно, неправильным. В качестве альтернативы изучите страницу руководства find(1) и сравните эти две команды. В частности, сравните команду du a | grep ... с соот ветствующим вызовом find. Какая из них работает быстрее? Что лучше – написать новую программу или использовать побочный эффект существующей?
