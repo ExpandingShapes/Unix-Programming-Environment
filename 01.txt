@@ -72,7 +72,7 @@ In the second one ed is confused because I'm afraid it's not supposed to work wi
 
 Упражнение 2.2. На основании информации этого раздела можно в об
 щих чертах представить себе механизм работы команды ls. Подсказ
-ка: cat . >foo; ls f foo.
+ка: cat . >foo; ls -f foo.
 
 It reads . directory file which contains the contents of the current directory and lists them.
 
