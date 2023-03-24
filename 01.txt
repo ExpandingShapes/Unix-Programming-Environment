@@ -77,6 +77,7 @@ In the second one ed is confused because I'm afraid it's not supposed to work wi
 It reads . directory file which contains the contents of the current directory and lists them.
 
 Упражнение 2.3. (более сложное). Как работает команда pwd?
-
+It just prints out $PWD variable (on modern systems). Every time we change current directory, $PWD is updated accordingly.
 
 Упражнение 2.4. Команда du была создана для слежения за использованием диска. Ее применение для поиска файлов в каталоге представляется довольно странным и, возможно, неправильным. В качестве альтернативы изучите страницу руководства find(1) и сравните эти две команды. В частности, сравните команду du a | grep ... с соот ветствующим вызовом find. Какая из них работает быстрее? Что лучше – написать новую программу или использовать побочный эффект существующей?
+find command runs faster. The UNIX philosophy states "Make each program do one thing well. To do a new job, build afresh rather than complicate old programs by adding new “features”.".  I'd rather use find for the purpose of finding files or directories.
